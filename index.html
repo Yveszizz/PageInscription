@@ -7,14 +7,15 @@
     <link rel="stylesheet" type="text/css"  href="style.css">
 </head>
 <body>
+  
    <header class="top-bar">
        <div>
            <h1>Pas encore de Nom</h1>
        </div>
        <nav>
             <div class="cell-profile">
-               <a class="unlogged-btn" id="topbar-login-button" href="#"><span class="unlogged-btn-label">login</span></a>
-               <a class="unlogged-btn" id="topbar-signin-button" href="#"><span class="unlogged-btn-label">sign in</span></a>
+               <a class="unlogged-btn" id="topbar-login-button" href="#"><span class="unlogged-btn-label">Connexion</span></a>
+               <a class="unlogged-btn" id="topbar-signin-button" href="#"><span class="unlogged-btn-label">Inscription</span></a>
            </div>
        </nav>
    </header>
@@ -51,20 +52,20 @@
                     <input class="unlogged-input" id="register_form_username" required data-check="blogname" type="text" placeholder="Nom d'utilisateur"/>
                 </div>
                 <div class="unlogged-input-container">
-                    <input class="unlogged-input-pwd" type="password" id="register_form_pwd1" required data-check="password" placeholder="Mot de passe"/>
-                </div>
-                <div class="unlogged-pwd-indications">
+                    <input class="unlogged-input-pwd" type="password" id="register_form_pwd1" required data-check="password" placeholder="Mot de passe" />
+                    <div class="unlogged-pwd-indications">
                     <div id="pwd_hint"> 8 caractères min.</div>
+                </div>
                 </div>
                 <div class="unlogged-input-container">
                     <input class="unlogged-input-pwd" type="password" id="register_form_pwd1" required data-check="password" placeholder="Mot de passe"/>
-                </div>
-                <div class="unlogged-pwd-indications">
+                    <div class="unlogged-pwd-indications">
                     <div id="pwd_hint"> 8 caractères min.</div>  
                 </div>
+                </div>        
                 <div class="unlogged-input-group">
-                     <div class="unlogged-input-container">
-                        <div class="unlogged-input-firstname">
+                    <div class="unlogged-input-container">
+                        <div class="unlogged-input-genre">
                             <select class="unlogged-input unlogged-input-select" id="register_form_gender_input" data-check="gender" data-class-error="is-inverse" data-insert-value="true">
                                 <option value="0">Genre</option>
                                 <option value="F">
@@ -75,7 +76,7 @@
                         </div>
                     </div>
                     <div class="unlogged-input-container">
-                        <div class="unlogged-input-lastname">
+                        <div class="unlogged-input-age">
                             <select class="unlogged-input unlogged-input-select" id="register_form_age_input" data-check="age" data-insert-value="true">
                 <option value="0">Âge</option>
                                     <option value="1">

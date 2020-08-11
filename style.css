@@ -1,10 +1,35 @@
-                                /* Header */
+  
+            /* Header */
 .top-bar{
 }
 h1{
     margin: auto;
     width: 300px;
 }
+.unlogged-btn{
+    border: 2px solid;
+    border-radius: 35px;
+    box-sizing: border-box;
+    color: #2d96c8;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 14px 30px;
+    text-align: center;
+    font-family:sans-serif;
+}
+#topbar-signin-button:hover{
+    background-color:#3B7199;;
+}
+#topbar-login-button:hover{
+    color: #3B7199;
+}
+#topbar-signin-button{
+    background-color: #2d96c8;
+    color: white;
+}
+
+
 .cell-profile{
     text-align: right;
     margin-right: 50px;
@@ -16,7 +41,8 @@ h1{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 400px;
+    width: 600px;
+    flex-wrap: wrap;
     height: auto;
     border: 1px solid black;
 }
@@ -24,19 +50,34 @@ h1{
 .unlogged-heading ,h1, .unlogged-link-login{
     font-family: sans-serif;
 }
+.unlogged-register-form{
+    width: 430px;
+    //border: 1px solid black;
+}
 .unlogged-form{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     height: 500px; 
-    width: 300px;
-    align-items: stretch;
+    width: auto;
+    margin: auto;
 }
 .unlogged-input-container-names{
-    display: ;
-    
+    display:flex ;
+    justify-content:space-between;
+   
 }
-
 .unlogged-pwd-indications{
     align-items: stretch;
+}
+input{
+    width: 100%;
+    height: 50px;
+    border-radius: 6px;
+    border: 1px solid #82837F;
+    
+}
+.unlogged-input-group{
+    display: flex;
+    justify-content:space-around;
 }
