@@ -1,6 +1,24 @@
-  
-            /* Header */
+                                /* Font */
+.unlogged-heading ,h1,.unlogged-link-login{
+    font-family: sans-serif;
+}
+h3{
+    font-family:sans-serif;
+    font-weight: 500;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+body{
+    //background-color: #424B51;
+    width: 100%;
+    height: 100%;
+} 
+                                /* Header */
 .top-bar{
+    background-color: white;
+    height: 100%;
+    width: 100%;
 }
 h1{
     margin: auto;
@@ -17,6 +35,7 @@ h1{
     padding: 14px 30px;
     text-align: center;
     font-family:sans-serif;
+    cursor: pointer;
 }
 #topbar-signin-button:hover{
     background-color:#3B7199;;
@@ -28,11 +47,12 @@ h1{
     background-color: #2d96c8;
     color: white;
 }
-
-
 .cell-profile{
     text-align: right;
     margin-right: 50px;
+}
+.unlogged-link:hover{
+    text-decoration: none;
 }
                                 /* Bloc Page */
 .unlogged-container-inner{
@@ -44,12 +64,46 @@ h1{
     width: 600px;
     flex-wrap: wrap;
     height: auto;
-    border: 1px solid black;
+   
 }
-/*form */
-.unlogged-heading ,h1, .unlogged-link-login{
-    font-family: sans-serif;
+.unlogged-social{
+display: flex;
 }
+.login-btn{
+    background-color: white;
+    cursor: pointer;
+    border: none;
+    font-size: 20px;
+    margin: 15px;
+    border-radius: 5px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#unlogged-btn-facebook{
+    background-color: #4267b2;
+    color: white;
+    border: 1.5px solid #4267b2
+}
+#unlogged-btn-facebook:hover{
+    color: #4267b2;
+    background-color: white; 
+}
+#unlogged-btn-google{
+     border: 1.5px solid white;
+}
+#unlogged-btn-google:hover{
+     //background-color: #518ef8;
+    border: 1.5px solid #518ef8;
+}
+.logo_login{
+    border-radius: 10px;
+    width: 30px;
+    margin-top:1px; 
+}
+                                    /* Form */
+
 .unlogged-register-form{
     width: 430px;
     //border: 1px solid black;
@@ -80,4 +134,48 @@ input{
 .unlogged-input-group{
     display: flex;
     justify-content:space-around;
+}
+
+                                    /* Modal */
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.2); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 15px;
+    width: 30%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    width: 30px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: rgba(150,170,190,0.3);  
 }

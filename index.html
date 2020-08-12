@@ -7,7 +7,16 @@
     <link rel="stylesheet" type="text/css"  href="style.css">
 </head>
 <body>
-  
+ <body2>
+ <!-- Trigger/Open The Modal -->
+        <button id="myBtn">Open Modal</button>
+  <div id="myModal" class="modal">
+                       <!-- Modal content -->
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Connexion</h3>
+              </div>
+        </div>
    <header class="top-bar">
        <div>
            <h1>Pas encore de Nom</h1>
@@ -23,13 +32,13 @@
        <div class="unlogged-container-inner">
           <h2 class="unlogged-heading">Inscrivez-vous</h2>
           <div class="unlogged-social">
-              <button class="unlogged-btn-facebook" role="button">FaceBook
+              <button class="login-btn" id="unlogged-btn-facebook" role="button"><img class="logo_login" src="f_logo.png" alt="facebook" width="30px" height="30px"/>    FaceBook
               </button>
-              <button class="unlogged-btn-google" role="button">Google
+              <button class="login-btn" id="unlogged-btn-google" role="button"><img class="logo_login" src="g_logo.png" alt="google" height="30px" width="30px"/>    Google
               </button>
           </div>
           <div class="unlogged-link-login">Déja inscrit ? 
-          <a class="unlogged-link"href="#">Connexion</a>
+          <a class="unlogged-link"href="#">Connectez-vous</a>
           </div>
           <div class="unlogged-register-form">
               <form class="unlogged-form" data-type="form-page">
@@ -62,7 +71,7 @@
                     <div class="unlogged-pwd-indications">
                     <div id="pwd_hint"> 8 caractères min.</div>  
                 </div>
-                </div>        
+                </div>       
                 <div class="unlogged-input-group">
                     <div class="unlogged-input-container">
                         <div class="unlogged-input-genre">
@@ -293,5 +302,6 @@
        
    </footer>
     <script type="text/javascript" src="app.js"></script>
+    </body2>
 </body>
 </html>
