@@ -2,12 +2,19 @@ const modal = document.getElementById("myModal");
 
 // Get the button that opens the modal
 const topBarLoginBtn = document.getElementById("topbar-login-button");
-
+const loginLink = document.querySelector("#login-link");
 // Get the <span> element that closes the modal
 const span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal
-topBarLoginBtn.onclick = function() {
+topBarLoginBtn.onclick = function () {
+  modal.style.display = "block";
+}
+loginLink.onclick = function () {
+  modal.style.display = "block";
+}
+    
+function openModal() {
   modal.style.display = "block";
 }
 

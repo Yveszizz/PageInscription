@@ -179,3 +179,8 @@ input{
   cursor: pointer;
   background-color: rgba(150,170,190,0.3);  
 }
+
+#modal-login-button{
+    width: 100%;
+    margin-top: 20px;
+}
