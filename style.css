@@ -165,7 +165,6 @@ input{
     background-color: #fefefe;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
-    //border: 0.5px solid #888;
     border-radius: 15px;
     box-shadow: 2px 2px 2px grey;
     width: 30%; /* Could be more or less, depending on screen size */
@@ -193,4 +192,7 @@ input{
 #modal-login-button{
     width: 100%;
     margin-top: 20px;
+}
+.modal-input{
+    margin: 1px;
 }
