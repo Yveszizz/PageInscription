@@ -1,7 +1,4 @@
 const modal = document.getElementById("myModal");
-var windowObjectReference;
-
-// Get the button that opens the modal
 const topBarLoginBtn = document.getElementById("topbar-login-button");
 const loginLink = document.querySelector("#login-link");
 // Get the <span> element that closes the modal
@@ -11,7 +8,9 @@ const formInscriptionBtn = document.querySelector(".unlogged-btn-pink");
 const formInscription = document.querySelector(".unlogged-form");
 const allInputs = document.querySelector(".unlogged_input");
 
-// When the user clicks on the button, open the modal
+const formPassword = document.querySelector(".unlogged-input-pwd");
+
+// When the user clicks on the button or link, "Connexion"
 topBarLoginBtn.addEventListener("click", openModal);
 loginLink.addEventListener("click", openModal);
 function openModal () {
@@ -30,17 +29,24 @@ window.onclick = function(event) {
 }
 
 // incription button
-formInscriptionBtn.addEventListener("click", checkForm);
+formInscriptionBtn.addEventListener("click", checkFormOpenNewWidows);
 
-function checkForm (boolean){
+function checkFormOpenNewWidows (boolean){
     let result = formInscription.checkValidity();
-    if(result){
+    if(result && password){
         window.open("index2.html", "_self");
         stockPersonalInfos();   
-    } 
+    } else if (!password){
+        // Ici on va affciher un message au niveau de mdp 
+        // "Le mot de passe doit ..."
+    }
 }
-function openRequestedPopup() { 
-}
+
+formPassword.addEventListener("keyup",() => {
+    let lengthPassword = formPassword.value.length > 8 ? true:false;
+    let checkPassword = password.value;
+})
+
 
 function stockPersonalInfos (){
     localStorage.setItem("Prenom",formInscription[0].value);
@@ -51,3 +57,4 @@ function stockPersonalInfos (){
     localStorage.setItem("Genre",formInscription[6].value);
     localStorage.setItem("Age",formInscription[7].value);
 }
+
