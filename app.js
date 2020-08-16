@@ -39,7 +39,8 @@ function checkFormOpenNewWidows (boolean){
     } else if (!password){
         // Ici on va affciher un message au niveau de mdp 
         // "Le mot de passe doit ..."
-    }
+    }  
+     
 }
 
 formPassword.addEventListener("keyup",() => {
