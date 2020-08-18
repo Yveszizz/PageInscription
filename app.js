@@ -10,6 +10,7 @@ const allInputs = document.querySelector(".unlogged_input");
 
 const formPassword = document.querySelector(".unlogged-input-pwd");
 
+//let lengthPassword = false;
 // When the user clicks on the button or link, "Connexion"
 topBarLoginBtn.addEventListener("click", openModal);
 loginLink.addEventListener("click", openModal);
@@ -33,19 +34,24 @@ formInscriptionBtn.addEventListener("click", checkFormOpenNewWidows);
 
 function checkFormOpenNewWidows (boolean){
     let result = formInscription.checkValidity();
-    if(result && password){
+    if(result && lengthPassword){
         window.open("index2.html", "_self");
         stockPersonalInfos();   
-    } else if (!password){
+    } /*else if (valid == false){
         // Ici on va affciher un message au niveau de mdp 
         // "Le mot de passe doit ..."
-    }  
+        console.log("mdp trop petit je crois");
+    }  */
      
 }
 
-formPassword.addEventListener("keyup",() => {
-    let lengthPassword = formPassword.value.length > 8 ? true:false;
-    let checkPassword = password.value;
+formPassword.addEventListener("keyup",function checkPassword() {
+        const regex =/\d/;
+        lengthPassword = formPassword.value.length > 7 ? true:false;
+        difficile = regex.test(formPassword.value);
+        let valid =  difficile && lengthPassword  === true? true:false;
+        console.log(valid);
+        return valid;  
 })
 
 
@@ -58,4 +64,3 @@ function stockPersonalInfos (){
     localStorage.setItem("Genre",formInscription[6].value);
     localStorage.setItem("Age",formInscription[7].value);
 }
-
