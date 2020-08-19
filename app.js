@@ -1,4 +1,4 @@
-const modal = document.getElementById("myModal");
+
 const topBarLoginBtn = document.getElementById("topbar-login-button");
 const loginLink = document.querySelector("#login-link");
 // Get the <span> element that closes the modal
@@ -10,10 +10,20 @@ const allInputs = document.querySelector(".unlogged_input");
 
 const formPassword = document.querySelector(".unlogged-input-pwd");
 
+// Modal
+const modal = document.getElementById("myModal");
+const loginModalBtn =  document.querySelector("#modal-login-button");
+const mdpModalInput = document.querySelector(".modal-unlogged-pwd");
+const mailModalInput = document.querySelector(".modal-unlogged-email");
+
 //let lengthPassword = false;
 // When the user clicks on the button or link, "Connexion"
 topBarLoginBtn.addEventListener("click", openModal);
 loginLink.addEventListener("click", openModal);
+formPassword.addEventListener("keyup", checkPassword);
+formInscriptionBtn.addEventListener("click", checkFormOpenNewWidows);
+loginModalBtn.addEventListener("click", login);
+
 function openModal () {
   modal.style.display = "block";
 }    
@@ -30,30 +40,26 @@ window.onclick = function(event) {
 }
 
 // incription button
-formInscriptionBtn.addEventListener("click", checkFormOpenNewWidows);
-
 function checkFormOpenNewWidows (boolean){
     let result = formInscription.checkValidity();
-    if(result && lengthPassword){
+    if(result && checkPassword()){
         window.open("index2.html", "_self");
-        stockPersonalInfos();   
+        stockPersonalInfos();
     } /*else if (valid == false){
         // Ici on va affciher un message au niveau de mdp 
         // "Le mot de passe doit ..."
         console.log("mdp trop petit je crois");
     }  */
-     
 }
-
-formPassword.addEventListener("keyup",function checkPassword() {
-        const regex =/\d/;
-        lengthPassword = formPassword.value.length > 7 ? true:false;
-        difficile = regex.test(formPassword.value);
-        let valid =  difficile && lengthPassword  === true? true:false;
-        console.log(valid);
-        return valid;  
-})
-
+                              
+function checkPassword() {
+    const regex =/\d/;
+    lengthPassword = formPassword.value.length > 7 ? true:false;
+    difficile = regex.test(formPassword.value);
+    let valid =  difficile && lengthPassword  === true? true:false;
+    console.log(valid);
+    return valid;  
+}
 
 function stockPersonalInfos (){
     localStorage.setItem("Prenom",formInscription[0].value);
@@ -63,4 +69,11 @@ function stockPersonalInfos (){
     localStorage.setItem("mdp",formInscription[4].value);
     localStorage.setItem("Genre",formInscription[6].value);
     localStorage.setItem("Age",formInscription[7].value);
+}
+
+function login () {
+    if(mailModalInput){
+        console.log(mailModalInput.value);
+       }
+   
 }
